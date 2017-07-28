@@ -1,0 +1,214 @@
+/* ---------- GENERAL ---------- */
+
+html, body {
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+#main {
+	box-sizing: border-box;
+	overflow:auto;
+	
+	margin-left: 7.5%;
+	position: relative;
+
+}
+
+#title {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 5;
+}
+
+div.clear {
+	clear:both;
+}
+
+div#sequence {
+
+  position: relative;
+  width: 50%;
+  height: 100%;
+
+  margin: 0 auto;
+  padding-top: 225px;
+
+  clear: both;
+
+}
+
+/* ---------- EFFECTS ---------- */
+
+/* --- UP AND IN --- */
+
+@keyframes upAndIn {
+	to {
+		transform: translateY(0); 
+		opacity: 1;
+	}
+ }
+
+ /* --- TRIM --- */
+
+.trim {
+	max-height:600px;
+	max-width: 100px;
+	margin:0 1%;
+
+	overflow: hidden;
+	float:left;
+}
+
+.trim:hover {
+	opacity:0.7;
+	transition: opacity 0.3s, transform 0.3s;
+	transform:translateY(5px);
+}
+
+/* --- TINT --- */
+
+.tint {
+	position: relative;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.tint:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,255,255, 0.5);
+	transition: all .5s linear;
+}
+
+/* ---------- SEQUENCE ---------- */
+
+#abt-seq, #code-seq, #mod-seq, #art-seq, #con-seq {
+	display:block;
+	background-size:cover;
+
+	position:relative;
+	float:left;
+
+	opacity: 0; 
+	animation: upAndIn 0.5s ease 0.2s forwards;
+
+}
+
+#abt-seq {
+	height:250px;
+	width:300px;
+
+	right:45px;
+	z-index: 1;
+
+	transform: translateY(150px);
+}
+
+#code-seq{
+	height:350px;
+	width:400px;
+
+	right:190px;
+	z-index: 2;
+
+	transform: translateX(150px);
+}
+
+#mod-seq {
+	height:400px;
+	width:450px;
+
+	right: 335px;
+	z-index: 3;
+
+	transform: translateY(150px);
+}
+
+#art-seq {
+	height:350px;
+	width:400px;
+
+	right:190px;
+	z-index: 4;
+
+	transform: translateX(150px);
+}
+
+#con-seq {
+	height:250px;
+	width:300px;
+
+	right:45px;
+	z-index: 5;
+
+	transform: translateY(150px);
+}
+
+/* ---------- TEXT ---------- */
+
+h1 {
+	font-family: 'Amatica SC', cursive;
+	font-size: 50px;
+}
+
+a, p {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-decoration: none;
+}
+
+#title {
+	display:inline-block;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+	position:absolute;
+	width:20%;
+	top:50px;
+	right:70px;
+
+	z-index:6;
+}
+
+nav ul li, nav ul li a {
+	position:relative;
+	display:block;
+	float:left;
+	padding:0 5% 0 5%;
+
+	list-style: none;
+	text-decoration: none;
+
+	cursor:crosshair;
+}
+
+nav ul li a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #eeccff;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(15px);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+	opacity: 1;
+	transform: translateY(5px);
+}
+
+/* ---------- MEDIA QUERIES ---------- */
