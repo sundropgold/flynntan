@@ -1,12 +1,12 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 
-// 	// hide the bottom half of the index page until clicked
+	// hide the bottom half of the index page until clicked
 
-// 	$("#bottom").hide();
+	$("#bottom").hide();
 
-// 	// once anything with .btn is clicked, reveal the bottom
-// 	$(".btn").on("click", function(){
+	// once anything with .btn is clicked, reveal the bottom
+	$(".btn").on("click", function(){
 
-// 		$("#bottom").fadeIn(3000).slideUp(400).show();
-// 	});
-// });
+		$("#bottom").fadeIn(3000).show();
+	});
+});
