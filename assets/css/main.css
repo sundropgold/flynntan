@@ -1,3 +1,24 @@
+/*
+
+	FLYNN TAN PORTFOLIO - MAIN.CSS
+
+	Summary: This CSS file handles the general styling, media queries, and
+	aesthetics of my portfolio site. 
+
+	Sections:
+		* General
+		* CSS Animations & Effects
+			* up and in
+			* trim
+			* tint
+			* left trim
+		* Text
+		* Navigation
+		* Sequence
+		* Bottom
+
+*/
+
 /* ---------- GENERAL ---------- */
 
 html, body {
@@ -84,7 +105,7 @@ div.center {
 	margin-bottom:10%;
 }
 
-/* ---------- EFFECTS ---------- */
+/* ---------- CSS ANIMATIONS AND EFFECTS ---------- */
 
 /* --- UP AND IN --- */
 
@@ -142,6 +163,48 @@ div.center {
 
 	overflow: hidden;
 	float:left;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+	position:absolute;
+	width:25%;
+	top:50px;
+	right:70px;
+
+	z-index:6;
+}
+
+nav ul li, nav ul li a, a {
+	position:relative;
+	display:block;
+	float:left;
+	padding:0 5% 0 5%;
+
+	list-style: none;
+	text-decoration: none;
+
+	cursor:crosshair;
+}
+
+nav ul li a::after, a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #c889f8;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(15px);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after, a:hover::after, a:focus::after {
+	opacity: 1;
+	transform: translateY(5px);
 }
 
 /* ---------- SEQUENCE ---------- */
@@ -237,48 +300,6 @@ a, p {
 
 #title {
 	display:inline-block;
-}
-
-/* ---------- NAVIGATION ---------- */
-
-nav {
-	position:absolute;
-	width:25%;
-	top:50px;
-	right:70px;
-
-	z-index:6;
-}
-
-nav ul li, nav ul li a, a {
-	position:relative;
-	display:block;
-	float:left;
-	padding:0 5% 0 5%;
-
-	list-style: none;
-	text-decoration: none;
-
-	cursor:crosshair;
-}
-
-nav ul li a::after, a::after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #c889f8;
-  content: '';
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: translateY(15px);
-}
-
-nav ul li a:hover::after,
-nav ul li a:focus::after, a:hover::after, a:focus::after {
-	opacity: 1;
-	transform: translateY(5px);
 }
 
 /* ---------- BOTTOM ---------- */
@@ -394,3 +415,176 @@ footer p {
 }
 
 /* ---------- MEDIA QUERIES ---------- */
+
+/* *** SEQUENCE MEDIA QUERIES (MEDIUM) *** */
+@media screen and (min-width:801px) and (max-width:1220px) {
+
+	/* GENERAL STYLING */
+	div#sequence {
+		position: relative;
+		width: 50%;
+		height: 100%;
+
+		margin: 0 auto;
+		padding-top: 220px;
+
+		clear: both;
+	}
+
+	/* CSS EFFECTS */
+	.trim {
+		max-height:180px;
+		max-width: 180px;
+
+		overflow: hidden;
+		float:left;
+	}
+
+	/* SEQUENCE STYLING */
+	#abt-seq, #code-seq, #art-seq, #con-seq {
+		display:block;
+		background-size:cover;
+
+		position:relative;
+		float:left;
+
+		opacity: 0; 
+		animation: upAndIn 0.5s ease 0.2s forwards;
+		margin-top:5%;
+	}
+
+	#abt-seq {
+		height:250px;
+		width:250px;
+
+		right:40px;
+		z-index: 1;
+
+		/*transform: translateY(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#code-seq{
+		height:250px;
+		width:250px;
+
+		right:40px;
+		z-index: 2;
+
+	/*	transform: translateX(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#mod-seq {
+		display: none;
+	}
+
+	#art-seq {
+		height:230px;
+		width:230px;
+
+		right:40px;
+		z-index: 4;
+
+	/*	transform: translateX(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#con-seq {
+		height:170px;
+		width:auto;
+
+		right:50px;
+		z-index: 5;
+
+	/*	transform: translateY(150px);*/
+		transform:translateY(-150px);
+	}
+}
+
+/* *** SEQUENCE MEDIA QUERIES (SMALL) *** */
+@media screen and (max-width: 800px) {
+
+	/* GENERAL STYLING */
+	div#sequence {
+		position: relative;
+		width: 80%;
+		height: 100%;
+
+		margin: 0 auto;
+		padding-top: 220px;
+
+		clear: both;
+	}
+	
+	/* CSS EFFECTS */
+	.trim {
+		max-height:180px;
+		max-width: 180px;
+
+		overflow: hidden;
+		float:left;
+	}
+
+	/* SEQUENCE STYLING */
+	#abt-seq, #code-seq, #art-seq, #con-seq {
+		display:block;
+		background-size:cover;
+
+		position:relative;
+		float:left;
+
+		opacity: 0; 
+		animation: upAndIn 0.5s ease 0.2s forwards;
+		margin-top:5%;
+	}
+
+	#abt-seq {
+		height:250px;
+		width:250px;
+
+		right:40px;
+		z-index: 1;
+
+		/*transform: translateY(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#code-seq{
+		height:250px;
+		width:250px;
+
+		right:40px;
+		z-index: 2;
+
+	/*	transform: translateX(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#mod-seq {
+		display: none;
+	}
+
+	#art-seq {
+		height:230px;
+		width:230px;
+
+		right:40px;
+		z-index: 4;
+
+	/*	transform: translateX(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#con-seq {
+		height:170px;
+		width:auto;
+
+		right:50px;
+		z-index: 5;
+
+	/*	transform: translateY(150px);*/
+		transform:translateY(-150px);
+	}
+
+}

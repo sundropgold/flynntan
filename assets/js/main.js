@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
-	// hide the bottom half of the index page until clicked
 
-	$("#bottom").hide();
+	/* ---------- INDEX.HTML ---------- */
+	
+	// don't show the sequence until the html page is ready
+	$('#sequence').hide();
 
-	// once anything with .btn is clicked, reveal the bottom
-	$(".btn").on("click", function(){
-
-		$("#bottom").fadeIn(3000).show();
-	});
+	// then fade in sequence
+	$('#sequence').fadeIn(1000);
 });
