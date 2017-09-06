@@ -188,7 +188,7 @@ nav ul li, nav ul li a, a {
 	cursor:crosshair;
 }
 
-nav ul li a::after, a::after {
+nav ul li a::after {
   position: absolute;
   top: 100%;
   left: 0;
@@ -202,7 +202,7 @@ nav ul li a::after, a::after {
 }
 
 nav ul li a:hover::after,
-nav ul li a:focus::after, a:hover::after, a:focus::after {
+nav ul li a:focus::after {
 	opacity: 1;
 	transform: translateY(5px);
 }
@@ -302,6 +302,27 @@ a, p {
 	display:inline-block;
 }
 
+/* ---------- BUTTONS ---------- */
+
+#top {
+	margin:0 auto;
+	position:absolute;
+	bottom:50px;
+
+	height:20PX;
+	width:32PX;
+
+	border:1px #c889F8 solid;
+	background-color:#fff;
+}
+
+#top:hover {
+	opacity: 1;
+	transition: opacity 0.3s, transform 0.3s;
+	transform: translateY(-5px);
+	border-color:#00b0ae;
+}
+
 /* ---------- BOTTOM ---------- */
 
 /* --- GENERAL --- */
@@ -317,6 +338,14 @@ a, p {
 
 #bottom h2 {
 	margin-bottom:10px;
+}
+
+li.back-home, li.back-home a, li.page-links, li.page-links a {
+	color:#c889F8;
+}
+
+li.back-home:hover, li.back-home a:hover, li.back-home:active, li.back-home a:active, li.page-links:hover, li.page-links a:hover, li.page-links:active, li.page-links a:active {
+	color:#00b0ae;
 }
 
 /* --- ABOUT --- */
@@ -379,7 +408,16 @@ a, p {
 	float:left;
 }
 
+#art-preview li, #art-preview a {
+	width:150px;
+	font-family: 'Amatica SC', cursive;
+	font-size:30px;
+	line-height:30px;
+	text-align:left;
+}
+
 /* --- CONTACT --- */
+
 #contact-preview h2 {
 	text-align: right;
 }
@@ -389,6 +427,7 @@ a, p {
 	font-size:26px;
 	line-height:45px;
 	text-align: left;
+	width:150px;
 }
 
 /* ---------- FOOTER ---------- */
@@ -411,7 +450,11 @@ footer {
 footer p {
 	writing-mode:tb-rl;
 	position:absolute;
-	bottom:60px;
+	bottom:100px;
+}
+
+footer a::after {
+  	display:none;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
