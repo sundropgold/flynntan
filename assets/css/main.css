@@ -459,6 +459,97 @@ footer a::after {
 
 /* ---------- MEDIA QUERIES ---------- */
 
+/* *** SEQUENCE MEDIA QUERIES (SMALL) *** */
+@media screen and (min-width:515px) and (max-width:560px) {
+
+	/* GENERAL STYLING */
+
+	div#main {
+		margin:0;
+	}
+
+	div#sequence {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		margin:0 auto;
+		padding-top: 220px;
+
+		clear: both;
+	}
+
+	/* CSS EFFECTS */
+	.trim {
+		max-height:180px;
+		max-width: 180px;
+
+		overflow: hidden;
+		float:left;
+	}
+
+	/* SEQUENCE STYLING */
+	#abt-seq, #code-seq, #art-seq, #con-seq {
+		display:block;
+		background-size:cover;
+
+		position:relative;
+		float:left;
+
+		opacity: 0; 
+		animation: upAndIn 0.5s ease 0.2s forwards;
+		margin-top:5%;
+	}
+
+	#abt-seq {
+		height:250px;
+		width:250px;
+
+		right:40px;
+		z-index: 1;
+
+		/*transform: translateY(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#code-seq{
+		height:250px;
+		width:250px;
+
+		right:40px;
+		z-index: 2;
+
+	/*	transform: translateX(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#mod-seq {
+		display: none;
+	}
+
+	#art-seq {
+		height:230px;
+		width:230px;
+
+		right:40px;
+		z-index: 4;
+
+	/*	transform: translateX(150px);*/
+		transform:translateY(-150px);
+	}
+
+	#con-seq {
+		height:170px;
+		width:auto;
+
+		right:50px;
+		z-index: 5;
+
+	/*	transform: translateY(150px);*/
+		transform:translateY(-150px);
+	}	
+}
+
 /* *** SEQUENCE MEDIA QUERIES (MEDIUM) *** */
 @media screen and (min-width:801px) and (max-width:1220px) {
 
