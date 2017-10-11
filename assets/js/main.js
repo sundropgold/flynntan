@@ -56,4 +56,60 @@ $(document).ready(function(){
 
 		$('#sequence').fadeIn(1000);
 	});
+
+	// from title, return to index page
+	$(document).on("click", ".title-back-home", function(){
+		window.location.assign("index.html");
+	});
+
+	/* ---------- CODE.HTML ---------- */
+	$('#autotrack').on("click", function(){
+		window.location.assign("http://autotrackofficial.herokuapp.com")
+	});
+
+	$('#codehive').on("click", function(){
+		window.location.assign("http://codehive.herokuapp.com");
+	});
+
+	$('#soundscout').on("click", function(){
+		window.location.assign("http://realsoundscout.herokuapp.com");
+	});
+
+	/* ---------- ART.HTML ---------- */
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	$('.prev').on("click", function(){
+		plusSlides(-1);
+	});
+
+	$('.next').on("click", function(){
+		plusSlides(1);
+	});
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		
+		if (n > slides.length) {slideIndex = 1} 
+		
+		if (n < 1) {slideIndex = slides.length}
+		
+		for (i = 0; i < slides.length; i++) {
+			$(slides[i]).hide(); 
+		}
+
+		
+
+		$(slides[slideIndex-1]).css({display:'block'}); 
+	}
 });

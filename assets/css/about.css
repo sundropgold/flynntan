@@ -1,0 +1,86 @@
+/*
+
+	FLYNN TAN PORTFOLIO - ABOUT.CSS
+
+	Summary: This CSS file handles the specific about 
+	page styles. 
+
+	Sections:
+		* General
+		* Images
+		* About Content
+		* Media Queries
+
+*/
+
+/* ---------- GENERAL ---------- */
+#about {
+	box-sizing: border-box;
+	
+	margin-left: 7.5%;
+	position: relative;
+}
+
+/* ---------- IMAGES ---------- */
+#ftsun {
+	display:block;
+	width:50%;
+	margin:0 auto;
+}
+
+/* ---------- ABOUT CONTENT ---------- */
+#about-bottom {
+	position:relative;
+	width:50%;
+	height:100%;
+
+	margin:0 auto;
+	padding-top:225px;
+}
+
+#about-p {
+	margin-top:5%;
+	margin-bottom:20%;
+}
+
+#about-bottom p a {
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+#about-bottom p a:hover {
+	color:#c889F8;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media screen and (max-width:400px) {
+
+	#ftsun {
+		width:100%;
+	}
+
+	#about {
+		width:90%;
+		margin:0%;
+	}
+	
+	#about-bottom {
+		width:60%;
+		margin-right:28%;
+	}
+}
+
+@media screen and (min-width:401px) and (max-width:716px) {
+	
+	#ftsun {
+		width:100%;
+	}
+}
+
+@media screen and (min-width:717px) and (max-width:921px) {
+	
+	#ftsun {
+		width:65%;
+	}
+}

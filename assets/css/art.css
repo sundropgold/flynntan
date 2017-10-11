@@ -1,0 +1,107 @@
+/*
+
+	FLYNN TAN PORTFOLIO - ART.CSS
+
+	Summary: This CSS file handles the specific about 
+	page styles. 
+
+	Sections:
+		* General
+		* Images
+		* Art Content
+		*Slideshow
+		* Media Queries
+
+*/
+
+/* ---------- GENERAL ---------- */
+#art {
+	box-sizing: border-box;
+	
+	margin-left: 7.5%;
+	position: relative;
+}
+
+/* ---------- ART CONTENT ---------- */
+#art-bottom {
+	position:relative;
+	width:50%;
+	height:100%;
+
+	margin:0 auto;
+	padding-top:225px;
+	margin-bottom: 20%;
+}
+
+/* ---------- ART CONTENT ---------- */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+	max-height:500px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+ 	background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.active {
+ 	background-color: #717171;
+}
+
+/* Sliding animation */
+.slide {
+	-webkit-animation-name: upAndIn;
+	-webkit-animation-duration: 1.5s;
+	animation-name: upAndIn;
+	animation-duration: 1.5s;
+
+	opacity:0;
+	animation: slideIn .5s ease 0.2s forwards;
+	transform:translateX(-150px);
+}
+
+@keyframes slideIn {
+	to {
+		transform: translateX(0); 
+		opacity: 1;
+	}
+ }

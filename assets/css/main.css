@@ -2,8 +2,8 @@
 
 	FLYNN TAN PORTFOLIO - MAIN.CSS
 
-	Summary: This CSS file handles the general styling, media queries, and
-	aesthetics of my portfolio site. 
+	Summary: This CSS file handles the general styling, media queries, 
+	index page styles, and aesthetics across my portfolio site. 
 
 	Sections:
 		* General
@@ -16,6 +16,7 @@
 		* Navigation
 		* Sequence
 		* Bottom
+		* Media Queries
 
 */
 
@@ -88,9 +89,9 @@ div.right {
 }
 
 div.center {
-	display:block;
+	display:inline-block;
 	float:left;
-	width:30%;
+	width:100%;
 	opacity:0;
 	animation: upAndIn 0.5s ease 0.2s forwards;
 	transform: translateY(150px);
@@ -207,6 +208,10 @@ nav ul li a:focus::after {
 	transform: translateY(5px);
 }
 
+.title-back-home:hover {
+	color:#00b0ae;
+}
+
 /* ---------- SEQUENCE ---------- */
 
 #abt-seq, #code-seq, #mod-seq, #art-seq, #con-seq {
@@ -278,7 +283,7 @@ nav ul li a:focus::after {
 
 /* ---------- TEXT ---------- */
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: 'Amatica SC', cursive;
 }
 
@@ -288,6 +293,11 @@ h1 {
 
 h2 {
 	font-size: 50px;
+	margin-bottom:2%;
+}
+
+h3 {
+	font-size: 40px;
 	margin-bottom:2%;
 }
 
@@ -338,6 +348,10 @@ a, p {
 
 #bottom h2 {
 	margin-bottom:10px;
+}
+
+.preview-links:hover {
+	color:#c889F8;
 }
 
 li.back-home, li.back-home a, li.page-links, li.page-links a {
@@ -399,13 +413,11 @@ li.back-home:hover, li.back-home a:hover, li.back-home:active, li.back-home a:ac
 }
 
 /* --- ART --- */
-.center .center-trim {
-	max-width: 200px;
-}
 
 .center img {
 	height:150px;
 	float:left;
+	display:inline-block;
 }
 
 #art-preview li, #art-preview a {
@@ -574,6 +586,30 @@ footer a::after {
 		float:left;
 	}
 
+	/* NAVIGATION LINKS */
+	nav ul li a::after {
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  width: 100%;
+	  height: 3px;
+	  background: #c889f8;
+	  content: '';
+	  opacity: 0;
+	  transition: none;
+	  transform: none;
+	}
+
+	nav ul li a:hover::after,
+	nav ul li a:focus::after {
+		opacity: 0;
+		transform: none;
+	}
+
+	nav ul li a:hover, nav ul li a:active {
+		color:#c889f8;
+	}
+
 	/* SEQUENCE STYLING */
 	#abt-seq, #code-seq, #art-seq, #con-seq {
 		display:block;
@@ -658,6 +694,30 @@ footer a::after {
 
 		overflow: hidden;
 		float:left;
+	}
+
+	/* NAVIGATION LINKS */
+	nav ul li a::after {
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  width: 100%;
+	  height: 3px;
+	  background: #c889f8;
+	  content: '';
+	  opacity: 0;
+	  transition: none;
+	  transform: none;
+	}
+
+	nav ul li a:hover::after,
+	nav ul li a:focus::after {
+		opacity: 0;
+		transform: none;
+	}
+
+	nav ul li a:hover, nav ul li a:active {
+		color:#c889f8;
 	}
 
 	/* SEQUENCE STYLING */

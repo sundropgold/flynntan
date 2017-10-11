@@ -1,0 +1,88 @@
+/*
+
+	FLYNN TAN PORTFOLIO - CODE.CSS
+
+	Summary: This CSS file handles the specific about 
+	page styles. 
+
+	Sections:
+		* General
+		* Code Content
+
+*/
+
+/* ---------- GENERAL ---------- */
+#code {
+	box-sizing: border-box;
+	
+	margin-left: 7.5%;
+	position: relative;
+}
+
+/* ---------- CODE CONTENT ---------- */
+#code-bottom {
+	position:relative;
+	width:50%;
+	height:100%;
+
+	margin:0 auto;
+	padding-top:225px;
+}
+
+#autotrack, #codehive, #soundscout, #github {
+	height:90px;
+	width:90%;
+
+	margin:0 auto;
+	padding:1% 2%;
+
+	opacity: 0;
+}
+
+#autotrack {
+	background-color: #000;
+	color:#00cbff;
+	text-shadow:1px 1px #ff9933;
+
+	animation: upAndIn 0.5s ease 0.2s forwards;
+	transform:translateY(150px);
+}
+
+#codehive {
+	background-color:#fb1;
+	text-shadow: 2px 2px #fff;
+
+	animation: upAndIn 1s ease 0.2s forwards;
+	transform:translateY(150px);
+}
+
+#soundscout {
+	background-color:#000;
+	color:#00faff;
+	text-shadow: 1.5px 1.5px #ff0059;
+
+	animation: upAndIn 1.5s ease 0.2s forwards;
+	transform:translateY(150px);
+}
+
+#github {
+	animation: upAndIn 1.5s ease 0.2s forwards;
+	transform:translateY(150px);
+}
+
+#github a:hover {
+	color:#c889f8;
+}
+
+#autotrack h3:hover, #codehive h3:hover, #soundscout h3:hover {
+	font-size: 45px;
+}
+
+#autotrack p {
+	color:#00cbff;
+	text-shadow:none;
+	font-size:12px;
+	padding:1%;
+}
+
+ 
