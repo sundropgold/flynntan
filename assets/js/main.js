@@ -49,10 +49,10 @@ $(document).ready(function(){
 
 	// from previews, go back to home
 	$(document).on("click", ".back-home", function(){
-		$('#about-preview').fadeOut();
-		$('#code-preview').fadeOut();
-		$('#art-preview').fadeOut();
-		$('#contact-preview').fadeOut();
+		$('#about-preview').hide();
+		$('#code-preview').hide();
+		$('#art-preview').hide();
+		$('#contact-preview').hide();
 
 		$('#sequence').fadeIn(1000);
 	});

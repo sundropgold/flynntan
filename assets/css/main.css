@@ -17,6 +17,7 @@
 		* Sequence
 		* Bottom
 		* Media Queries
+		* Media Queries for Previews
 
 */
 
@@ -164,6 +165,44 @@ div.center {
 
 	overflow: hidden;
 	float:left;
+}
+
+/* --- SLIDE IN --- */
+.slide {
+	-webkit-animation-name: upAndIn;
+	-webkit-animation-duration: 1.5s;
+	animation-name: upAndIn;
+	animation-duration: 1.5s;
+
+	opacity:0;
+	animation: slideIn .5s ease 0.2s forwards;
+	transform:translateX(-150px);
+}
+
+@keyframes slideIn {
+	to {
+		transform: translateX(0); 
+		opacity: 1;
+	}
+ }
+
+/* --- FADE --- */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  opacity:1;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
 }
 
 /* ---------- NAVIGATION ---------- */
@@ -352,6 +391,16 @@ a, p {
 
 .preview-links:hover {
 	color:#c889F8;
+}
+
+li.page-links a {
+	font-family: 'Amatica SC', cursive;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: right;
+    float:right;
+    padding:0;
+    width:100%;
 }
 
 li.back-home, li.back-home a, li.page-links, li.page-links a {
@@ -781,4 +830,39 @@ footer a::after {
 		transform:translateY(-150px);
 	}
 
+}
+
+/* ---------- MEDIA QUERIES FOR PREVIEWS ---------- */
+
+@media screen and (max-width:595px) {
+	
+	/* GENERAL */
+	div#bottom {
+		width:100%;
+		margin:0;
+	}
+
+	/* ABOUT PREVIEW */
+	#about-preview {
+		width:88%;
+	}
+
+	/* CODE PREVIEW */
+	#code-preview {
+		width:88%;
+	}
+
+	/* ART PREVIEW */
+	#art-preview {
+		width:88%;
+	}
+
+	#art-preview .center img {
+		width:140px;
+	}
+
+	/* CONTACT PREVIEW */
+	#contact-preview {
+		margin-left: 5%
+	}
 }

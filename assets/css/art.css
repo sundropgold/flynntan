@@ -86,22 +86,3 @@
 .active {
  	background-color: #717171;
 }
-
-/* Sliding animation */
-.slide {
-	-webkit-animation-name: upAndIn;
-	-webkit-animation-duration: 1.5s;
-	animation-name: upAndIn;
-	animation-duration: 1.5s;
-
-	opacity:0;
-	animation: slideIn .5s ease 0.2s forwards;
-	transform:translateX(-150px);
-}
-
-@keyframes slideIn {
-	to {
-		transform: translateX(0); 
-		opacity: 1;
-	}
- }
